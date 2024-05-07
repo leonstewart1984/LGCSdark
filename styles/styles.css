@@ -1,0 +1,639 @@
+@font-face {
+    font-family: 'tex_gyre_adventor';
+    src: url('../styles/texgyreadventor-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:  hsl(130, 6%, 81%); 
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 0px;
+    min-width: fit-content;
+}
+.bigcontainer {
+    background-color: rgba(85, 214, 170, 0.97);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 50px;
+}
+.logo {
+    margin: 0;
+    height: 50px;
+}
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: rgba(85, 214, 170, .97);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+nav a:hover {
+    color: #000;
+}
+.navtoggle:checked ~ nav {
+    transform: scale(1,1);
+}
+.navtoggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+.navtoggle {
+    display: none;
+}
+.navtogglebutton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.navtogglebutton span,
+.navtogglebutton span::before,
+.navtogglebutton span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+.navtogglebutton span::before,
+.navtogglebutton span::after {
+    content: '';
+    position: absolute;
+}
+.navtogglebutton span::before {
+    bottom: 7px;
+}
+.navtogglebutton span::after {
+    top: 7px;
+}
+#welcome {
+    font-family: fantasy;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+.title {
+    font-weight: normal;
+}
+#services {
+    background-color: hsla(123, 27%, 88%, 1); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%;    
+    border-radius: 30px;
+}
+.ourservetitle {
+    margin-bottom: 10px;
+}
+#ourserve {
+    font-size: 25px;
+    position: relative;
+    bottom: 45px;
+}
+#bucketpic {
+    width: 100%;
+    border-radius: 150px 30px 30px 0;
+}
+.floorpic {
+    padding-top: 50px;
+    margin-top: 5px;
+}
+.tablebackground {
+    padding: 10px;   
+}
+table {
+    border: 8px inset  hwb(150 43% 11%);
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+th {
+    border: 8px inset  hwb(150 43% 11%);
+    border-radius: 30px;
+    background-color:  hwb(150 43% 11%);
+}
+.tservice {
+    border: 8px inset  hwb(150 43% 11%);
+    border-radius: 30px;
+    text-align: center;
+}
+.row2 {
+    background-color: hwb(150 43% 11%);
+}
+.row1 {
+    background-color: hsl(150, 1%, 65%);
+}
+.btmrght {
+    border-radius: 0 0 25px 0;
+}
+.dtail li span {
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    border: 8px inset  hwb(150 43% 11%);
+    border-radius: 30px;
+    background-color:  hwb(150 43% 11%);
+}
+.dtail li {
+    list-style-type: none;
+    list-style-position: outside;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#yy1::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url();
+}
+#y1 {
+    text-align: center;
+
+}
+#y2::before {
+    float: left;
+    position: relative;
+    bottom: 3px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/icons8-eco-friendly-cleaning-50.png);
+    background-size: contain;
+}
+#y3::before {
+    position: relative;
+    bottom: 2px;
+    float: left;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/icons8-cleaning-a-surface-30.png);
+}
+#y4::before {
+    float: left;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/cleaner-svgrepo-com\ \(1\).svg);
+    background-size: contain;
+}
+#y5::before {
+    float: left;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/3374255_clean_cleaning_cloth_dust_polish_icon.svg);
+    background-size: contain;
+}
+#y6::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/9826593_laundry_basket_clothing_clothes_dirty_icon.svg);
+}
+#y7::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/bathtub-cleaning-svgrepo-com.svg);
+    background-size: contain;
+}
+#y8::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/toilet-bowl3-svgrepo-com\ \(1\).svg);
+    background-size: contain;
+}
+#y9::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/toilet-paper-cleaning-towel-svgrepo-com.svg);
+}
+#y10::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/soap-svgrepo-com.svg);
+}
+#y11::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/vacuum-cleaner-vacuum-cleaner-housekeeping-svgrepo-com.svg);
+}
+#y12::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/icons8-dishes-60.png);
+    background-size: contain;
+}
+small {
+    font-size: 10px;
+    background-color: transparent;
+    border: none;
+}
+#y13::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/icons8-cleaning-51.png);
+    background-size: contain;
+}
+#y14::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/icons8-cleaning\ handle-64.png);
+    background-size: contain;
+}
+#y15 {
+    text-align: center;
+    display: flex;
+    text-wrap: wrap;
+}
+#y16::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/maid-svgrepo-com.svg);
+    background-size: contain;
+}
+#y17::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/radiator-svgrepo-com.svg);
+    background-size: contain;
+}
+#y18::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/brooming-svgrepo-com.svg);
+    background-size: contain;
+}
+#y19::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/cleaning-kit-svgrepo-com.svg);
+    background-size: contain;
+}
+#y20 {
+    text-align: center;
+    display: flex;
+    text-wrap: wrap;
+}
+#y21::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/cleaning-svgrepo-comwindow\ \(1\).svg);
+    background-size: contain;
+}
+#y22 {
+    text-align: center;
+    display: flex;
+    text-wrap: wrap;
+}
+#y23::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/noun-cleaning-oven-4891885.svg);
+    background-size: contain;
+}
+#y24 {
+    text-align: center;
+    display: flex;
+    text-wrap: wrap;
+}
+#y25::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/2274332_clothes_laundry_machine_washing_icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#y26::before {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    content: '';
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/noun-laundry-delivery-4015405.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bookingprocedure {
+    padding-top: 50px;
+    padding-left: 10px;
+}
+.bookingtext {
+    padding: 10px;
+}
+form {
+    box-shadow: 10px 10px 10px 10px rgba(0.5, 0.5, 0.5, 0.5); 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 8px solid  hwb(150 43% 11%);
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+    background-color: hsl(150, 1%, 65%);
+    display: flex;
+    flex-direction: column
+} 
+.form1 {
+    width: fit-content;
+}
+.greentick {
+    height: 300px;
+}
+.tickbox {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+legend {
+    background-color: hsl(150, 1%, 65%);
+    border: 8px solid hwb(150 43% 11%);
+    border-radius: 30px;
+}
+textarea, input, select {
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 1rem;
+}
+.addy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+.puse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.ownProductsOff {
+    display: none;
+}
+.ownProductsOn {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+.upload {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.servicesrq {
+    display: flex;
+    text-align: center;
+}
+.servicesrq label {
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.submit {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons {
+    cursor: pointer;
+}
+.submit input {
+    background-color: aquamarine;
+    font-family: 'tex_gyre_adventor';
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 100%;
+}
+.bookingbackground {
+    display: inline-block;
+    justify-content: center;
+    background-color: hsl(150, 1%, 65%);
+    width: 100%;
+    margin-top: 20px;
+}
+.bookingbackground::before {
+    content: '';
+    display: block;
+    border: solid 2px  hwb(150 43% 11%);
+    background-color:  hwb(150 43% 11%);
+    height: 40px;
+    width: 100%;
+
+}
+.bookingbackground::after {
+    content: '';
+    display: block;
+    border: solid 2px  hwb(150 43% 11%);
+    background-color:  hwb(150 43% 11%);
+    height: 40px;
+    width: 100%;
+
+}
+.Cancellation {
+    margin: 10px;
+}
+.boutback {
+	position: absolute;
+	top: 50px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-image: url(../images/gettintro-1709573693.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.bouttext {
+    grid-column: 1;
+    background-color: aquamarine;
+    border-radius: 20px;
+    min-width: 100px;
+    margin-bottom: 80px;
+    
+}
+.contactsection {
+    position: absolute;
+    top: 50px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-image: url(../images/Inbound-Call-Centres-What-They-Are-How-They-Work-And-How-Your-Business-Could-Use-One.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding-top: 50px;
+    width: 100%;
+    
+    height: 100%;
+}
+@media screen and (max-width: 800px) {
+    .contactsection {
+        min-width: 640px; 
+        padding-bottom: 10px; 
+        height: auto;
+    }
+    .boutback {
+        min-width: 640px; 
+        padding-bottom: 10px; 
+        height: auto;
+    }
+}
+.innercontactsection {
+    margin-left: 10px;
+    
+}
+.contactinfo {
+    grid-column: 1;
+    list-style-type: none;
+    font-size: 20px;
+}
+.officetime {
+    margin-bottom: 18px;
+}

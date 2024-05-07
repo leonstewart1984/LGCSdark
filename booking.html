@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=-1.0">
+        <title>booking</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <header class="bigcontainer">
+            <img src="images/lglogo.svg" class="logo" alt="lglogo">
+           <input type="checkbox" class="navtoggle" id="navtoggle">
+            <nav>
+                <ul class="nav">
+                    <li id="homeb"><a href="index.html">home</a></li>
+                    <li id="servicesb"><a href="services.html">Services</a></li>
+                    <li id="bookingb"><a href="booking.html">Booking</a></li>
+                    <li id="aboutb"><a href="about.html">About us</a></li>
+                    <li id="contactb"><a href="contact.html">Contact us</a></li>
+                 </ul>
+            </nav>
+            <label for="navtoggle" class="navtogglebutton">
+                <span></span>
+            </label>
+        </header>
+        <div class="bookingprocedure">
+            <h2>Booking Procedure </h2>
+        </div>
+    
+        <div class="bookingtext">
+            <p>
+            For all booking enquiries please call, text or email us using our contact details or use the booking form below.</p>
+            <p>Bookings made inside the 24 hour window will be classed as an emergency booking and charged accordingly (please see pricelist)
+            </p>
+            Telephone: 07301 246 539
+            Telegram: 07301 246 539
+            Text: 07301 246 539
+            Email: <a href="mailto:LGcleaning-services@outlook.com">LGcleaning-services@outlook.com</a>
+        </div>
+        <div class="bookingbackground">
+            <form id="theform" action="email.php" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Request a personalised quote*</legend>
+                    <div class="addy">
+                        <label for="fname">Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="addy">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+                    </div>
+                    <div class="addy">
+                        <label for="tel">Telephone</label>
+                        <input type="tel" id="telephone" name="tel" placeholder="Contact number" required>
+                    </div>
+                    <div class="addy">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <label>Property use</label>
+                        <div class="puse">
+                            <label for="Domestic">
+                                <input type="radio" id="Domestic" name="puse" value="Domestic" onclick="removeOption();" required>Domestic
+                            </label>
+                            <label for="Commercial">
+                                <input type="radio" id="Commercial" name="puse" value="Commercial" onclick="renderOption();">Commercial
+                            </label>
+                        </div>
+                        <div class="ownProductsOff"><label for="ownproducts">Do you provide use of your own cleaning products</label><input type="checkbox" id="ownproducts" name="products_provided" value="yes"></div>
+                    </div>
+                    <div class="addy">
+                        <label for="property_num">Flat/Room No</label>
+                        <input type="text" name="property_num" id="property_num" placeholder="Flat 3">
+                    </div>
+                    <div class="addy">
+                        <label for="address">Address</label>
+                        <textarea  name="address" id="address" placeholder="123 Main street Allenton Derby" cols="20" rows="3" required></textarea>
+                    </div>
+                    <div class="addy">
+                        <label for="city">City</label>
+                        <Select name="city" id="city" required>
+                            <option value="Derby">Derby</option>
+                            <option value="Nottingham">Nottingham</option>
+                        </Select>
+                    </div>
+                    <div class="addy">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" name="postcode" id="postcode" placeholder="DE12 3AB" required>
+                    </div>
+                    <div class="addy">
+                        <label for="property_type">Property Type</label>
+                        <select name="property_type" id="property_type" required>
+                            <option value=""></option>
+                            <option value="Office">Office</option>
+                            <option value="Bedsit">Bedsit</option>
+                            <option value="Studio flat">Studio flat</option>
+                            <option value="Flat low">Flat (upto 3 storeys)</option>
+                            <option value="Flat high">Flat (High rise)</option>
+                            <option value="Bungalow">Bungalow</option>
+                            <option value="HMO">HMO</option>
+                            <option value="House">House</option>
+                            <option value="House high">House (3+ Storeys)</option>
+                        </select>
+                    </div>
+                    <div class="addy">
+                        <label>Bathrooms</label>
+                        <label for="1">
+                            <input type="radio" name="Bathrooms" id="1" value="1" required>1
+                        </label>
+                        <label for="2">
+                            <input type="radio" name="Bathrooms" id="2" value="2">2
+                        </label>
+                        <label for="3">
+                            <input type="radio" name="Bathrooms" id="3" value="3">3
+                        </label>
+                        <label for="4">
+                            <input type="radio" name="Bathrooms" id="4" value="4">4
+                        </label>
+                        <label for="5">
+                            <input type="radio" name="Bathrooms" id="5" value="5">5
+                        </label>
+                    </div>
+                    <div class="addy">
+                        <label>Bedrooms</label>
+                        <label for="Bedrooms">
+                            <input type="radio" name="Bedrooms" value="1" required>1
+                        </label>
+                        <label for="Bedrooms">
+                            <input type="radio" name="Bedrooms" value="2">2
+                        </label>
+                        <label for="Bedrooms">
+                            <input type="radio" name="Bedrooms" value="3">3
+                        </label>
+                        <label for="Bedrooms">
+                            <input type="radio" name="Bedrooms" value="4">4
+                        </label>
+                        <label for="Bedrooms">
+                            <input type="radio" name="Bedrooms" value="5">5
+                        </label>
+                    </div>
+                    <div class="upload">
+                        <label for="pictures">Include images if possible...</label>
+                        <input type="file" name="pictures[]" multiple="multiple">
+                    </div>
+                    <label>Services required</label>
+                    <div class="servicesrq">
+                        <label for="cleantype">
+                            <input type="radio" name="cleantype" id="clean" value="Clean" required>Clean
+                        </label>
+                        <label for="cleantype">
+                            <input type="radio" name="cleantype" id="deepclean" value="Deep Clean">Deep Clean
+                        </label>
+                        <label for="windows">
+                            <input type="radio" name="windows" value="YES">Windows
+                        </label>
+                        <label for="oven">
+                            <input type="radio" name="oven" value="YES">Oven Clean
+                        </label>
+                        <label for="laundry">
+                            <input type="radio" name="laundry" value="YES">Laundry Service
+                        </label>
+                    </div>
+                    <div>
+                        <label for="prefdate">Preferred Date</label>
+                        <input type="datetime-local" name="prefdate">
+                    </div>
+                    <div>
+                        <label for="prefdate2time">Availability for appointment</label>
+                        <select name="prefdate2time" id="">
+                            <option value=""></option>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                        <select name="prefdate2day" id="">
+                            <option value=""></option>
+                            <option value="Weekdays">Weekdays</option>
+                            <option value="Weekends">Weekends</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comments">Useful information</label>
+                        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter text here..." ></textarea>
+                    </div>
+                </fieldset>
+                <div class="submit">
+                    <input type="reset" class="buttons">
+                    <input type="submit" class="buttons">
+                </div>
+            </form>
+        </div>
+        <p name="data"></p>
+        
+        <div class="Cancellation">
+            <h2>Cancellation Procedure</h2>
+            
+            Please call, text or email with the booking information to cancel and/or reschedule.
+            Below sets out the timeframe and fees for cancellations.<br>
+            0 - 24 hours – 50% of booking to be paid<br>
+            25 - 48 hours – 25% of booking to be paid <br>
+            
+            49 + hours – free Cancellation
+        </div>
+     
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
